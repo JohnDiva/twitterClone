@@ -111,7 +111,7 @@ try{
     let session = await Session.findOne({
         where: {
              sessionId: id }
-    })
+    });
     
     
         (async() => await Tweet.destroy({
