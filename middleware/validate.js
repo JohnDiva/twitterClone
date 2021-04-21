@@ -11,7 +11,7 @@ let checkDuplicateUsername = async function(entry){
     if( user.count >= 2){
         result= true
     }
-    console.log('lllllllllllllllllllllllllll')
+
 
     return result;
 }
