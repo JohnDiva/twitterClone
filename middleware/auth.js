@@ -68,13 +68,10 @@ const verifyToken = async (req,res,next)=> {
         jwt.verify(token, secret,(err,decoded)=>{
             if(err) {
                 req.error = "username Not verified";
-                console.log("errrrrrrrrrrror")
                 res.redirect("/")
             }
             if(decoded){
                 req.decoded = decoded.username
-                console.log('decodeddddddddddddddddddddd')
-                console.log(req.decoded)
 
                 let id =uuidv4();
 
