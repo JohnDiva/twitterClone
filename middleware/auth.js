@@ -128,8 +128,7 @@ let getSessionName = async function(id){
             sessionId: id
         }
     })
-    console.log("find ssn Nameeeeeeeeeeeeeeeee")
-    console.log(uname.rows)
+
     return uname.rows[uname.count-1].dataValues.ssnName;
 }
 
