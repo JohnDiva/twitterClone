@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include('../partials/header') %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+        <%-include('../partials/navbar') %>
+<div class="main">
+       <h1 class="text-center display-4 text-dark">WELCOME to Your Home Page, <%=uname%></h1>
+        <hr>
+       <div class="text-info"> UserName: <%=uname%></div>
+        <hr>
+        
+        <h2 class="text-center display-4 text-muted" >Tweets you posted</h2>
+        <% for (let t of locals.tweets) { %>
+            <hr>
+            <div class="text-dark">
+                <ul>
+                    <li>
+                        <%= t.dataValues.content %>
+                    </li>
+                </ul> 
+                   
+        <% } %> 
+
+        <%-  include('../partials/footer') %>
+        
+</div>
+</body>
+</html>
